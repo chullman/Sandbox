@@ -1,0 +1,20 @@
+Begin
+
+    startNumber = 1
+    endNumber = 100
+    currentNumber = startNumber
+    
+    While currentNumber < endNumber
+
+        While startNumber <= currentNumber
+
+            If startNumber not equal 1 and startNumber not
+
+        End
+
+        startNumber = 1
+
+        currentNumber++
+    End
+
+End
