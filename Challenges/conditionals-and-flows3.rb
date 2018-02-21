@@ -2,11 +2,27 @@ welcome = "Welcome to the banking app"
 
 puts welcome
 
-"What would you like to do? (options: balance, deposit, withdraw, exit)"
+ puts "Enter in your password:"
+
+password_input = gets.chomp
+
+while password_input != "yay"
+    puts "Invalid password. Try again."
+    password_input = gets.chomp
+    if password_input.downcase == "exit"
+        abort
+    end
+end
+
+
+options_message = "What would you like to do? (options: balance, deposit, withdraw, exit)"
+
+puts options_message
 
 balance = 0
 deposit = 0
 withdraw = 0
+
 
 loop do
     input = gets.chomp.downcase
@@ -14,7 +30,7 @@ loop do
     system('cls')
 
     while input != "balance" && input != "deposit" && input != "exit" && input != "withdraw"
-        puts "Invalid selection"
+        puts "Invalid selection. Try again."
         input = gets.chomp
     end
 
@@ -40,6 +56,9 @@ loop do
 
     end
 
+    puts options_message
+
 
 break if input == "exit"
 end
+
