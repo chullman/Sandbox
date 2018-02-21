@@ -10,9 +10,8 @@ while current_number <= end_number
 
         if current_number % 2 == 0
             is_prime = false
-        end
 
-        if start_number != 1
+        elsif start_number != 1
 
             if current_number % start_number == 0
 
