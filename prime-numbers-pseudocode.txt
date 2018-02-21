@@ -8,10 +8,19 @@ Begin
 
         While startNumber < currentNumber
 
-            If startNumber not equal 1
+            If startNumber not equal 1 and startNumber not equal to current number
+
+                if currentNumber mod startNumber == 0
+                    Flag currentNumber is not a prime number
+                End
 
             End
 
+            startNumber++
+        End
+
+        if flag currentNumber is a prime number
+            display currentNumber 
         End
 
         startNumber = 1
