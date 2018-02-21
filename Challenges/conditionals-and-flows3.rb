@@ -1,5 +1,8 @@
-puts "Welcome to the banking app
-What would you like to do? (options: balance, deposit, exit)"
+welcome = "Welcome to the banking app"
+
+puts welcome
+
+"What would you like to do? (options: balance, deposit, withdraw, exit)"
 
 balance = 0
 deposit = 0
@@ -23,16 +26,18 @@ loop do
         deposit = gets.chomp.to_i
         balance += deposit 
         puts "You have deposited $#{deposit}"
+
     elsif input == "withdraw"
         puts "How much would you like to withdraw?"
         withdraw = gets.chomp.to_i
+
         if withdraw > balance
             puts "You can't withdraw that much!"
         else
-            puts "You withdrew #{withdraw} from #{balance}"
+            puts "You withdrew $#{withdraw} from $#{balance}"
             balance -= withdraw
-
         end
+
     end
 
 
