@@ -6,9 +6,11 @@ Begin
     
     While currentNumber < endNumber
 
-        While startNumber <= currentNumber
+        While startNumber < currentNumber
 
-            If startNumber not equal 1 and startNumber not
+            If startNumber not equal 1
+
+            End
 
         End
 
