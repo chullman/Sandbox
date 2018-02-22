@@ -13,4 +13,12 @@ def add(*numbers_to_add)
     return total
 end
 
+def add_alternative(*numbers_to_add)
+    numbers_to_add.inject do |sum, number|
+        sum + number
+    end
+end
+
 puts add(1,2,3)
+
+puts add_alternative(1,2)
