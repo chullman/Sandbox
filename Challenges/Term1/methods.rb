@@ -14,6 +14,7 @@ def add(*numbers_to_add)
 end
 
 def add_alternative(*numbers_to_add)
+    # "sum" argument is known as "memo" which is called an "accumulator" (likened to a static var, I guesss)
     numbers_to_add.inject do |sum, number|
         sum + number
     end
