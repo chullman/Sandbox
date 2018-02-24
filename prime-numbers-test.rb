@@ -10,12 +10,14 @@ is_prime = true
 # The main loop to increment current_number from 1 to 100
 while current_number <= end_number
 
-    # A nested loop that will check all numbers below the current_number to see if a particular number below
+    # A nested loop that will check all numbers below the current_number to see if a particular number below it divides into current_number
     while start_number < current_number
 
+        # Obviously all even numbers are not primes
         if current_number % 2 == 0
             is_prime = false
 
+        # Otherwise if the current number is not an even number and the below number we're checking against isn't 1, check if the particular below number divides into current_number
         elsif start_number != 1
 
             if current_number % start_number == 0
