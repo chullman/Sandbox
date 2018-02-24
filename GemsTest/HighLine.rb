@@ -19,4 +19,6 @@ choose do |menu|
 
 say("This should be <%= color('bold', BOLD) %>!")
 
+say("<%= color('#{ask ("Please enter your password: "){ |q| q.echo = "*" }}', BOLD) %>")
+
   
