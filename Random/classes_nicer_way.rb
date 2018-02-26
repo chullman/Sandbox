@@ -10,7 +10,7 @@ class Dog
 
     def speak()
 
-        puts "Woof! my name is #{name} I am a #{breed}"
+        puts "Woof! my name is #{@name} I am a #{@breed}"
     end
 
     def give_treat(treat)
