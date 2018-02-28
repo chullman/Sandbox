@@ -1,14 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    espeak-ruby (1.0.4)
     geocoder (1.4.5)
+    gosu (0.13.2-x64-mingw32)
     highline (1.7.10)
 
 PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  espeak-ruby
   geocoder
+  gosu
   highline
 
 BUNDLED WITH

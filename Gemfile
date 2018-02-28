@@ -8,3 +8,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'highline'
 gem 'geocoder'
+gem "espeak-ruby", require: "espeak"
+gem 'gosu'
