@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Awesomee web page! </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript">
+    // eveyrhting in here is basically js code
+    // simple js function alert
+    name = "ian"
+    alert('hello there, my name is ' + name + '!')
+    // create function in JS
+    function dostuff() {
+      alert('you clicked the button!')
+    }
+  </script>
+  <style media="screen">
+    /* use a selector want to modify all h2 tags */
+    /* inlinestyling will overwrite this  */
+    h2 {
+      border: 1px solid green
+    }
+  </style>
+</head>
+<body>
+  <button onclick="dostuff()">Click this!</button>
+  <table border=1>
+    <!-- shouldnt use tables anymore  -->
+    <!-- now you use framework like bootstrap  -->
+    <!-- advise against using it  -->
+    <tr>
+      <td>
+        <h2 style="border:2px dotted blue">Colum 1</h2>
+        <!-- inline style will overide style sheet  -->
+        <p>Lorem Lipsum</p>
+      </td>
+      <td>
+        <p>Hello there</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2>
+        <!-- stretch this td across the colums so now spanning two colums  -->
+        <p>Row 2</p>
+      </td>
+    </tr>
+  </table>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Contact Page</a>
+    <a href="#">Another page</a>
+    <a href="#">Third page</a>
+  </nav>
+  <header>
+    <h1 style="color:red; background:black">This is my headingg, contorl shift h </h1>
+    <h2>Subheading</h2>
+  </header>
+  <main>
+    <section>
+      <p>Lorem ipsum dolor sit amet. hipsum.co good website </p>
+      <img src="http://lorempixel.com/400/100/" alt="some image">
+      <a href="http://google.com" target="_blank">click me</a>
+      <ol start=3>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+      </ol>
+      <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+      </ul>
+    </section>
+    <footer>
+      <p>this is my footer</p>
+    </footer>
+  </main>
+</body>
+</html>
