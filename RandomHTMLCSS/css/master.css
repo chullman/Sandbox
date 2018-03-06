@@ -1,0 +1,44 @@
+h2 {
+  border: 3px solid green
+}
+
+header {
+  font-size: 2em;
+  
+}
+
+h1 {
+  /*em size is relative to container - in this case, "header"*/
+  /*rem size is relative to the whole document*/
+  font-size: 2em;
+  font-family: 'Indie Flower', cursive;
+  /*font-family: "Foo", "Helvetica", sans-serif;*/
+  font-weight: lighter;
+  margin: 1px;
+  letter-spacing: 10px;
+}
+
+h2 {
+  
+  width: 50%;
+}
+
+/* id */
+#mybutton {
+  background: blue;
+}
+
+/* class */
+.pretty {
+  color: pink;
+}
+
+
+section p {
+  color: red;
+}
+
+/*Target the second p after h3*/
+section h3 + p + p {
+  font-size: larger;
+}
