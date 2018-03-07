@@ -3,6 +3,7 @@
       display: grid;
       grid-template-rows: 1fr 5fr 1fr;
       grid-template-columns: 2fr 5fr 3fr;
+      /* use elipses ....... to specify blank cell */
       grid-template-areas:
         "testheader  testheader  testheader"
         "nav     main    aside"
