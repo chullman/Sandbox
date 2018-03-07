@@ -1,11 +1,11 @@
-.container {
+.deals {
   display: grid;
   /* auto-fit means the number of columns is dynamic depending on the viewport*/
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
 }
 
-.container > div {
+.deals > div {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -19,14 +19,14 @@
   font-family: "Arial"
 }
 
-.container img {
+.deals img {
   align-self: center;
 
     /* Scales the image down on reduced viewport size*/
     max-width: 100%;
 }
 
-.container button {
+.deals button {
   /*margin-top pushes the button to the bottom of the flexbox column*/
   margin-top: auto;
   align-self: center;
