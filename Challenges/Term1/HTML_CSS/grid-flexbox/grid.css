@@ -21,6 +21,9 @@
 
 .container img {
   align-self: center;
+
+    /* Scales the image down on reduced viewport size*/
+    max-width: 100%;
 }
 
 .container button {
