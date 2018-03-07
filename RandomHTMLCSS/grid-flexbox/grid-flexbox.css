@@ -1,0 +1,30 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 30px 1fr 1fr
+}
+
+header {
+  display: flex;
+  background-color: grey;
+  grid-column: span 10;
+}
+
+header > div:nth-child(3) {
+    margin-left: auto;
+}
+
+aside {
+  background-color: yellow;
+  grid-column: span 2;
+}
+
+main {
+  background-color: teal;
+  grid-column: span 8;
+}
+
+footer {
+  background-color: blue;
+  grid-column: span 10;
+}

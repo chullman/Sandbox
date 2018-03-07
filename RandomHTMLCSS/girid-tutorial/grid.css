@@ -1,0 +1,40 @@
+.game-board 
+{
+  display: grid;
+  /* fr means fraction */
+  /* repeat(3, 1fr) is the same as writing out 1fr 1fr 1fr */
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  /* shorthand */
+  /* grid-template: repeat(3, 1fr) / repeat(3, 1fr); */
+
+  width: 100px;
+  height: 100px;
+
+  background-color: #34495e;
+  color: #fff;
+
+}
+
+.box {
+  background: #444;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AAA;
+  width: 100px;
+  height: 100px;
+}
+
+/* Move the 6th box in place of the 2nd box */
+/* Can also change the values below to have the boxes span multiple rows or columns */
+.box:nth-child(6)
+{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    /* shorthand */
+    /* grid-area: <row-start> / <column-start> / <row-end> / <column-end>; */
+}

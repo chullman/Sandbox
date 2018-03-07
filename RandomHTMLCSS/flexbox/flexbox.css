@@ -1,0 +1,31 @@
+header > ul {
+  display: flex;
+  background-color: yellow;
+  height: 100px;
+  /* justify-content is for horizontal alignment */
+  /* align-items is for vertical alignment */
+  /* unless flex-direction is a column, then the opposite is true */
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  /* flex-direction can reverse direction */
+  flex-direction: row-reverse;
+
+  /* flex-direction column or row to change ordering */
+  /* flex-direction: column; */
+
+  /* wrap to additional lines */
+  flex-wrap: wrap;
+
+  /* flex-flow is a combination of flex-direction and flex-wrap */
+  /* flex-flow: column wrap*/
+
+  /*  align-content determines the spacing between lines, 
+      while align-items determines how the items as a whole are aligned within the container. */
+      align-content: flex-start;
+}
+
+.tea-item {
+  /* Overrides align-items for a specific item */
+  align-self: flex-end;
+}
