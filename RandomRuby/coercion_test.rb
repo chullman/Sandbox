@@ -8,6 +8,7 @@ class CoerceTest
     CoerceTest.new(@num * a_fix_num)
   end
 
+  # This gets called automatically
   def coerce(other)
     return self, other
   end
