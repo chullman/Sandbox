@@ -1,0 +1,49 @@
+/* Media queries - To specify which CSS is loaded depending on viewport size*/
+
+body {
+  background-color: tan;
+}
+
+.topnav {
+  /* means anything outside container will be hidden */
+  overflow: hidden;
+  background-color: #333;
+}
+  
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+p {
+  font-size: 50px;
+}
+
+/* 768px width or less */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: blue;
+  }
+  p {
+    
+  }
+}
+
+/* 500px width or less */
+@media screen and (max-width: 500px) {
+  body {
+    background-color: olive;
+  }
+  .topnav a {
+    float: none;
+    width: 100px;
+  }
+  div {
+    display: none;
+  }
+}
