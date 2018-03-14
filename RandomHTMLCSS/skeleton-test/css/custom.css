@@ -59,11 +59,19 @@ body {
     border-bottom: 5px solid transparent;
     float: left;
     margin-bottom: -5px; } }
+.jumbotron::before {
+  opacity: 0.4;
+  position: absolute; }
+
 .jumbotron {
   width: 100%;
   height: 500px;
   background-color: white;
-  position: relative; }
+  position: relative;
+  background-image: url(../images/jumbotron_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .wave-container {
   position: absolute;
@@ -244,14 +252,14 @@ body {
     left: 950px; } }
 .jumbotron svg {
   position: absolute;
-  top: 100px;
+  top: 130px;
   width: 70%;
   height: 70%; }
 
 #wave path,
 #underwater {
   position: absolute;
-  animation: example 2s ease 2s infinite alternate;
+  animation: ship-water-anim 2s ease 2s infinite alternate;
   stroke: #5284a1;
   fill: #5284a1; }
 
@@ -259,10 +267,50 @@ body {
 #right_x5F_hull_x5F_whitespace {
   fill: #da871f; }
 
-@keyframes example {
+@keyframes ship-water-anim {
   0% {
-    transform: translateY(0px); }
+    transform: translateY(10px); }
   100% {
     transform: translateY(-40px); } }
+.jumbotron h1,
+.jumbotron h2 {
+  margin-bottom: 0;
+  text-align: right;
+  margin-right: 8%;
+  text-transform: uppercase;
+  font-size: 2em; }
+
+.jumbotron h1 {
+  padding-top: 2%; }
+
+.jumbotron h2 {
+  padding-top: 0;
+  color: whitesmoke; }
+
+.jumbotron h1 {
+  font-family: 'Montserrat', sans-serif; }
+
+.stronger-h1-letters {
+  font-size: 1.2em; }
+
+.orange-letters {
+  color: #ad6d1d; }
+
+.button-primary {
+  display: none; }
+
+@media (min-width: 400px) {
+  .button.button-primary, button.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    background-color: #293345;
+    border-color: #da871f;
+    font-size: 15px; }
+
+  .jumbotron h1,
+  .jumbotron h2 {
+    font-size: 3em; } }
 
 /*# sourceMappingURL=custom.css.map */
