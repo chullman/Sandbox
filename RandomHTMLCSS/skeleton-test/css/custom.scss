@@ -1,0 +1,168 @@
+body {
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+.topnav-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #293345;
+}
+
+#topnav-brand >img {
+  width: 100px;
+  padding-left: 10px;
+}
+
+
+
+#topnav-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  float: center;
+  margin-left: auto;
+  margin-right: 1%;
+  position: relative;
+  border-bottom: none;
+}
+
+#topnav-list > li {
+  float: none;
+  margin-bottom: 0;
+  text-align: left;
+  transition: all 300ms ease-in-out 0s;
+}
+
+#topnav-list > .active-page {
+  background-color: #da871f;
+}
+
+#topnav-list > li:hover {
+  background-color: #da871f;
+  color: #FFFFFF;
+  display: block;
+}
+
+#topnav-list > li > a {
+  display: block;
+  text-decoration: none;
+  white-space: normal;
+  /*transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;*/
+  color:white;
+  font-size: 1.3em;
+  line-height: 49px;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+
+
+
+
+@media (min-width: 400px) {
+
+  #topnav-list {
+    float: right;
+    border-bottom: 5px solid #da871f;
+  }
+
+  #topnav-list > li {
+    border-bottom: 5px solid transparent;
+    float: left;
+    margin-bottom: -5px;
+  }
+
+}
+
+.jumbotron {
+  width: 100%;
+  height: 500px;
+  background-color: white;
+  position: relative;
+}
+
+.wave-container {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: -20px;
+  right: 50%;
+}
+
+.wave-line {
+  background: #5284a1;
+  width: 20px;
+  
+  float: left;
+  animation: wave-anim 5s infinite ease-in-out alternate;
+  position: absolute;
+}
+
+@for $i from 1 through 19 {
+  .wave-line:nth-child(#{$i}) {
+    animation-delay: #{0.08*$i}s;
+    left: #{20*$i}px;
+  }
+}
+
+
+@keyframes wave-anim {
+  0% {
+    transform: translateY(-200px);
+    height: 200px;
+  }
+  100% {
+    transform: translateY(-300px);
+    height: 300px;
+  }
+}
+
+@media (min-width: 400px) {
+
+  .wave-line {
+    width: 50px;
+  }
+
+  @for $i from 1 through 19 {
+    .wave-line:nth-child(#{$i}) {
+      animation-delay: #{0.08*$i}s;
+      left: #{50*$i}px;
+    }
+  }
+
+}
+
+
+.jumbotron svg {
+  position: absolute;
+  top: 100px;
+  width: 70%;
+  height: 70%;
+}
+
+#wave path,
+#underwater {
+  position: absolute;
+  animation: example 2s ease 2s infinite alternate;
+  stroke: #5284a1;
+  fill: #5284a1;
+}
+
+#left_x5F_hull_x5F_whitespace,
+#right_x5F_hull_x5F_whitespace {
+  fill: #da871f;
+}
+
+@keyframes example {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
