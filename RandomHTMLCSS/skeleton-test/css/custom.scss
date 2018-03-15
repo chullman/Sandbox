@@ -222,6 +222,12 @@ body {
     background-color: #293345;
     border-color: #da871f;
     font-size: 15px;
+    transition: all 300ms ease-in-out 0s;
+
+    &:hover
+    {
+      background-color: #da871f;
+    }
   }
 
   .jumbotron h1,
@@ -229,3 +235,111 @@ body {
     font-size: 3em;
   }
 }
+
+#intro-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #b3b3b3;
+}
+
+#intro-box > h1,
+#intro-box > h2,
+#intro-box > h3 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.stronger-h3-letters {
+  font-weight:bold;
+}
+
+#intro-box > h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ad6d1d;
+  font-weight: 900;
+}
+
+#cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 5%;
+  justify-content: space-evenly;
+}
+
+#cards-container > div {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: white;
+  text-decoration: none;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all .3s ease-in;
+
+  width: 300px;
+  height: 300px;
+
+  margin-bottom: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
+
+  &:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  }
+}
+
+.thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+  border-bottom: 5px solid #da871f;
+}
+
+
+#cards-container .contact-card {
+  background-color: #293345;
+  align-items: center;
+  justify-content: center;
+}
+
+#cards-container .contact-card > h1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+#cards-container .contact-card > h3 {
+  color: #da871f;
+  margin: 0;
+}
+
+a.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  display: inline;
+}
+
+.card-bottom-tags {
+  font-size: 14px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+}
+

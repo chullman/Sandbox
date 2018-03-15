@@ -16,13 +16,49 @@
   <!-- Font
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,900" rel="stylesheet">
+
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Font Awesome CSS
+  -------------------------------------------------- -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- JavaScript
+  -------------------------------------------------- -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Add smooth scrolling to all links
+      $('a[href*="#"]').on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+              scrollTop: $(hash).offset().top
+          }, 800, function() {
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -59,7 +95,7 @@
       <h1><span class="stronger-h1-letters">C</span>hris <span class="stronger-h1-letters orange-letters">Hull</span>man</h1>
       <h2>Developer Portfolio</h2>
 
-      <a class="button button-primary" href="#">CLICK HERE TO SAIL ON</a>
+      <a class="button button-primary" href="#cards-container">CLICK HERE TO SAIL ON</a>
 
       <div class="wave-container">
 
@@ -114,6 +150,40 @@
       </svg>
 
     </div>
+
+    <aside id="intro-box">
+      <h1>Ahoy!</h1>
+      <h2>I'm Chris</h2>
+      <h3>I'm a student <span class="stronger-h3-letters">web developer</span></h3>
+      <h3>and an <span class="stronger-h3-letters">all-round IT</span> guy</h3>
+    </aside>
+
+
+    <main id="cards-container">
+      <div>
+        <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"></div>
+        <p class="card-bottom-tags">HTML | CSS | WEB DEV | WEB DESIGN</p>
+        <a href="#" class="wrap"></a>
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+      <div class="contact-card">
+          <h1>Contact Me</h1>
+
+          <h3><pre>&lt;anchor /&gt;</pre></h3>
+
+          <a href="#" class="wrap"></a>
+      </div>
+    </a>
+      
+    </main>
 
   </div>
 
