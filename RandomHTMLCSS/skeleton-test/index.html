@@ -19,10 +19,19 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- IcoMoon CSS -->
+  <link rel="stylesheet" href="fonts/icomoon.css">
+
   <link rel="stylesheet" href="css/custom.css">
 
-    <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- IcoMoon CSS -->
+  <link rel="stylesheet" href="fonts/icomoon.css">
 
   <!-- JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -51,15 +60,52 @@
           });
         } // End if
       });
+
+      $(function(){
+        $('.contact-wrap').click(function(event){
+            event.preventDefault();
+        });
+       });
+
     });
+
+
+
   </script>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
+
+  <ul class="contact-fixed-sidebar">
+    <li>
+      <a href="#">
+        <span class="icon-email"></span>
+      </a>
+    </li>
+    <li>
+        <a href="#">
+          <span class="icon-facebook"></span>
+        </a>
+      </li>
+      <li>
+          <a href="#">
+            <span class="icon-linkedin"></span>
+          </a>
+        </li>
+      <li>
+          <a href="#">
+            <span class="icon-octacat"></span>
+          </a>
+        </li>
+        <li>
+            <a href="#">
+              <span class="icon-medium"></span>
+            </a>
+          </li>
+  </ul>
 
   <!-- Primary page layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -78,7 +124,7 @@
         <li><a href="#">HTML/CSS</a></li>
         <li><a href="#">C#</a></li>
         <li><a href="#">Support & Admin</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">About Me</a></li>
       </ul>
     </div>
 
@@ -156,27 +202,33 @@
     <main id="cards-container">
       <div>
         <div class="thumb" style="background-image: url(images/HTMLCSSlogo.png);"></div>
-        <h5 class="card-title">> HTML and CSS Development</h5>
-        <p class="card-description">Read about my involvement in HTML and CSS for full-stack web development!</p>
-        <p class="card-bottom-tags">HTML | CSS | WEB DEV | WEB DESIGN</p>
-        <a href="#" class="wrap"></a>
+        <div class="card-bottom-half">
+          <h5 class="card-title">> HTML and CSS Development</h5>
+          <p class="card-description">Read about my involvement in HTML and CSS for full-stack web development!</p>
+          <p class="card-bottom-tags">HTML | CSS | WEB DEV | WEB DESIGN</p>
+        </div>
+        <a href="#" class="card-wrap"></a>
       </div>
       <div>
         <div class="thumb" style="background-image: url(images/Csharplogo.png);"></div>
-        <h5 class="card-title">> C# and .NET Development</h5>
-        <p class="card-description">Read and see all about my back-end development works in C# on the .NET framework!</p>
-        <p class="card-bottom-tags">VISUAL STUDIO | C# | .NET | XAMARIN.FORMS</p>
-        <a href="#" class="wrap"></a>
+        <div class="card-bottom-half">
+          <h5 class="card-title">> C# and .NET Development</h5>
+          <p class="card-description">Read and see all about my back-end development works in C# on the .NET framework!</p>
+          <p class="card-bottom-tags">VISUAL STUDIO | C# | .NET | XAMARIN.FORMS</p>
+        </div>
+        <a href="#" class="card-wrap"></a>
       </div>
       <div>
         <div class="thumb" style="background-image: url(images/Infrastructurelogo.png);"></div>
-        <h5 class="card-title">> Infrastructure Admin & Support</h5>
-        <p class="card-description">I have experience and certifications in providing server, network and desktop administration and support! Read about it here!</p>
-        <p class="card-bottom-tags">WINDOWS SERVER 2012 | WINDOWS SOE | REDHAT | ADMIN | CISCO | DATA NETWORKS</p>
-        <a href="#" class="wrap"></a>
+        <div class="card-bottom-half">
+          <h5 class="card-title">> Infrastructure Admin & Support</h5>
+          <p class="card-description">I have experience and certifications in providing server, network and desktop administration and support! Read about it here!</p>
+          <p class="card-bottom-tags">WINDOWS SERVER 2012 | WINDOWS SOE | REDHAT | ADMIN | CISCO | DATA NETWORKS</p>
+        </div>
+        <a href="#" class="card-wrap"></a>
       </div>
-      <div class="contact-card">
-        <h1>Contact Me</h1>
+      <div class="about-card">
+        <h1>About Me</h1>
 
         <h3>&lt;anchor /&gt;</h3>
 
@@ -184,6 +236,51 @@
       </div>
       
     </main>
+
+    <footer class="footer-container">
+      <div id="footer-container-left">
+
+
+        <h1>Contact Me</h1>
+
+        <h3>&lt;dock /&gt;</h3>
+        <a href="#footer-container-left" class="contact-wrap"></a>
+      </div>
+      <div id="footer-container-right">
+          <ul>
+              <li>
+                <a href="#">
+                  <span class="icon-email"></span>
+                  <span class="contact-text">christopherhullman@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                  <a href="#">
+                    <span class="icon-facebook"></span>
+                    <span class="contact-text">facebook.com/chris.hullman</span>
+                  </a>
+                </li>
+                <li>
+                    <a href="#">
+                      <span class="icon-linkedin"></span>
+                      <span class="contact-text">linkedin.com/in/christopher-hullman-68581340</span>
+                    </a>
+                  </li>
+                <li>
+                    <a href="#">
+                      <span class="icon-octacat"></span>
+                      <span class="contact-text">chullman</span>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                        <span class="icon-medium"></span>
+                        <span class="contact-text">@chrishullman</span>
+                      </a>
+                    </li>
+          </ul>
+      </div>
+    </footer>
 
   </div>
 
