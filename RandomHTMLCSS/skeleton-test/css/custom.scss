@@ -24,7 +24,6 @@ body {
   list-style: none outside none;
   margin: 0;
   padding: 0;
-  float: center;
   margin-left: auto;
   margin-right: 1%;
   position: relative;
@@ -255,15 +254,16 @@ body {
   margin-bottom: 10px;
 }
 
-.stronger-h3-letters {
-  font-weight:bold;
-}
-
-#intro-box > h1 {
+#intro-box>h2:first-child {
   font-family: 'Montserrat', sans-serif;
   color: #ad6d1d;
   font-weight: 900;
 }
+
+.stronger-h3-letters {
+  font-weight:bold;
+}
+
 
 #cards-container {
   display: flex;
@@ -271,7 +271,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   margin-top: 5%;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #cards-container > div {
@@ -346,6 +346,9 @@ a.wrap {
   margin: auto 0 0 0;
 }
 
+.card-title {
+  font-weight: bold;
+}
 
 .card-description {
   padding-left: 10px;
