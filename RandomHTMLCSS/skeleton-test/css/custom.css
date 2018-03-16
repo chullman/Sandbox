@@ -539,7 +539,7 @@ a .contact-wrap {
 
 /*
 *********************
-Top navigation - Top title header
+About page - Title header
 *********************
 */
 .jumbo-header-behind {
@@ -580,6 +580,11 @@ Top navigation - Top title header
   content: url("../images/anchor-icon.png");
   transform: scale(0.5, 0.5); }
 
+/*
+*********************
+About page - Personality box
+*********************
+*/
 .tag-and-portrait-container {
   display: flex;
   flex-direction: column;
@@ -640,9 +645,35 @@ Top navigation - Top title header
 
   .portrait-container > div {
     margin-right: 0; } }
+/*
+*********************
+About page - Timeline
+*********************
+*/
 .timeline-container {
-  background-color: orange;
+  background-color: #b3b3b3;
   width: 100%;
-  height: 500px; }
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px; }
+
+.timeline-container ul {
+  margin-left: 50%; }
+
+/* Line down the middle of the timeline  */
+.timeline-container ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin-bottom: 0;
+  padding-top: 50px;
+  background: #293345; }
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px; }
 
 /*# sourceMappingURL=custom.css.map */
