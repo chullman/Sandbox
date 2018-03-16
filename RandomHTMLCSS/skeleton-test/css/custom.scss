@@ -337,6 +337,7 @@ Home page - Cards
   background-color: #293345;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #cards-container .about-card > h1 {
@@ -351,7 +352,7 @@ Home page - Cards
   margin: 0;
 }
 
-a .card-wrap {
+.card-wrap {
   position: absolute;
   top: 0;
   left: 0;
@@ -360,14 +361,6 @@ a .card-wrap {
   display: inline;
 }
 
-a .contact-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; 
-  display: inline;
-}
 
 .card-bottom-half {
   background-color: #293345;
@@ -673,28 +666,65 @@ About page - Timeline
 *********************
 */ 
 
-.timeline-container {
-  background-color: #b3b3b3;
+.timeline-parent {
   width: 100%;
-  height: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  background-color: white;
+
+  margin-bottom: 20px;
+
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(41,51,69,0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(41,51,69,0.75);
+  box-shadow: 5px 5px 5px 0px rgba(41,51,69,0.75);
 }
 
-.timeline-container ul {
-  margin-left: 50%;
+.timeline-container {
+  position: relative;
+  width: 50%;
+  margin-left: 2em;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
 }
 
-/* Line down the middle of the timeline  */
-.timeline-container ul li {
-  list-style-type: none;
-  position: relative;
+.timeline-container::after {
+  content: '';
+  position: absolute;
   width: 6px;
-  margin-bottom: 0;
-  padding-top: 50px;
-  background: #293345;
+  background-color: #b3b3b3;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  margin-left: -3px;
+}
+
+.timeline-container > ul > li {
+  position: relative;
+  width: 100%;
+  list-style-type: none;
+}
+
+.timeline-container > ul > li > div {
+  margin-left: 50px;
+  color: white;
+  width: 100%;
+  padding-right: 30px;
+  background-color: #293345;
+}
+
+.timeline-container > ul > li::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 3px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 time {
