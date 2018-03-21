@@ -438,10 +438,15 @@ Home page - Cards
   padding-left: 10px;
   color: white; }
 
+/*
+*********************
+Fixed contact sidebar
+*********************
+*/
 .contact-fixed-sidebar {
   display: none; }
 
-@media (min-width: 400px) {
+@media (min-width: 550px) {
   .contact-fixed-sidebar {
     display: block;
     position: fixed;
@@ -532,7 +537,7 @@ Home page - Cards
 
 /*
 *********************
-About page - Title header
+Linked page - Title header
 *********************
 */
 .jumbo-header-behind {
@@ -566,13 +571,19 @@ About page - Title header
 .jumbo-header-front > h1 {
   font-family: 'Montserrat', sans-serif;
   color: white;
-  font-weight: 900;
-  margin-bottom: 0; }
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 4rem; }
 
 .jumbo-header-front .anchor {
   content: url("../images/anchor-icon.png");
+  visibility: hidden;
   transform: scale(0.5, 0.5); }
 
+@media (min-width: 660px) {
+  .jumbo-header-front .anchor {
+    visibility: visible; } }
 /*
 *********************
 About page - Personality box
@@ -619,7 +630,7 @@ About page - Personality box
   margin-left: auto;
   margin-right: auto; }
 
-@media (min-width: 400px) {
+@media (min-width: 800px) {
   .tag-and-portrait-container {
     flex-direction: row;
     width: 635px;
@@ -646,42 +657,63 @@ About page - Timeline
 .timeline-parent {
   width: 100%;
   background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
   margin-bottom: 20px;
+  padding-top: 40px;
   -webkit-box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75);
   -moz-box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75);
   box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75); }
 
 .timeline-container {
-  position: relative;
-  width: 50%;
-  margin-left: 2em;
-  margin-right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
+  margin-bottom: 20px;
+  margin-left: 2em; }
 
-.timeline-container::after {
+.list-gap {
+  width: 100px;
+  height: 20px;
+  background-color: white; }
+
+.timeline-container > ul {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+  overflow: hidden; }
+
+.timeline-container > ul > li {
+  float: left;
+  position: relative;
+  width: 80%;
+  list-style-type: none;
+  display: block;
+  margin-bottom: 0; }
+
+.timeline-container > ul > li::before {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #b3b3b3;
-  top: 20px;
-  bottom: 20px;
+  background-color: #293345;
+  top: 0px;
+  bottom: 0px;
   left: 20px;
   margin-left: -3px; }
 
-.timeline-container > ul > li {
-  position: relative;
-  width: 100%;
-  list-style-type: none; }
-
-.timeline-container > ul > li > div {
+.list-content {
   margin-left: 50px;
   color: white;
   width: 100%;
-  padding-right: 30px;
+  padding-right: 50px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
   background-color: #293345; }
+
+.list-content > p {
+  font-size: 1.1em; }
 
 .timeline-container > ul > li::after {
   content: '';
@@ -690,15 +722,84 @@ About page - Timeline
   height: 25px;
   left: 3px;
   background-color: white;
-  border: 4px solid #FF9F55;
+  border: 4px solid #da871f;
   top: 15px;
   border-radius: 50%;
   z-index: 1; }
 
 time {
   display: block;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 8px; }
+
+/*
+****************************************************
+Infrastructure page - Skills and Experience Headings
+****************************************************
+*/
+.skills-exp-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75);
+  box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75);
+  background-color: white;
+  position: relative; }
+
+.skills-exp-cont-left {
+  width: 100%;
+  height: 50%; }
+
+.skills-exp-cont-left > h1 {
+  text-align: center; }
+
+.skills-exp-cont-right {
+  width: 100%;
+  height: 50%; }
+
+.cert-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75);
+  box-shadow: 5px 5px 5px 0px rgba(41, 51, 69, 0.75);
+  background-color: white;
+  position: relative; }
+
+.cert-cont-bottom {
+  display: flex;
+  flex-direction: column; }
+
+.cert-logo {
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 5px solid #b3b3b3; }
+
+@media (min-width: 800px) {
+  .skills-exp-cont {
+    flex-direction: row; }
+
+  .skills-exp-cont-left {
+    width: 50%;
+    height: 100%; }
+
+  .skills-exp-cont-right {
+    width: 50%;
+    height: 100%; } }
+@media (min-width: 500px) {
+  .cert-cont-bottom {
+    display: flex;
+    flex-direction: row; } }
 
 /*# sourceMappingURL=custom.css.map */
