@@ -59,6 +59,10 @@ class StatsView
     puts "The average is: #{value.inspect}"
   end
 
+  def quit
+    puts "Thanks! Come again!"
+  end
+
 end
 
 class StatsController
@@ -85,11 +89,11 @@ class StatsController
       when 3
         avg = @StatsModel.average
         @StatsView.average_display(avg)
-      when 4
-        # Quit
       end
       choice = @StatsView.menu
     end
+
+    @StatsView.quit
 
   end
 end
