@@ -9,8 +9,14 @@
 
 require 'csv'    
 
-csv_text = File.read('customers.csv')
-csv = CSV.parse(csv_text, :headers => true)
+csv_text1 = File.read('schmoes.csv')
+csv = CSV.parse(csv_text1, :headers => true)
 csv.each do |row|
-  User.create!(row.to_hash)
+  Schmo.create!(row.to_hash)
+end
+
+csv_text2 = File.read('notes.csv')
+csv = CSV.parse(csv_text2, :headers => true)
+csv.each do |row|
+  Note.create!(row.to_hash)
 end

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Schmos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Ph</th>
+      <th>Email</th>
+      <th>Balance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schmos.each do |schmo| %>
+      <tr>
+        <td><%= schmo.name %></td>
+        <td><%= schmo.address %></td>
+        <td><%= schmo.ph %></td>
+        <td><%= schmo.email %></td>
+        <td><%= schmo.balance %></td>
+
+        <% @notes.each do |note| %>
+          <% if note.userid == schmo.id %>
+            <tr>
+              <td><%= note.note  %></td>
+              <td><%= note.userid  %></td>
+            </tr>
+          <% end %>
+        <% end %>
+
+        <td><%= link_to 'Show', schmo %></td>
+        <td><%= link_to 'Edit', edit_schmo_path(schmo) %></td>
+        <td><%= link_to 'Destroy', schmo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Schmo', new_schmo_path %>

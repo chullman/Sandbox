@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @schmo.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @schmo.address %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @schmo.ph %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @schmo.email %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @schmo.balance %>
+</p>
+
+<%= link_to 'Edit', edit_schmo_path(@schmo) %> |
+<%= link_to 'Back', schmos_path %>
