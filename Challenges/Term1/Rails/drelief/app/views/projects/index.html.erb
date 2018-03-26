@@ -1,0 +1,5 @@
+<% @projects.each do |a_project| %>
+<h1><%= a_project.name %></h1>
+<p><strong>Description:</strong> <%= a_project.description %></p>
+<p><strong>Total donation:</strong> $<%= a_project.total_donation_amount %></p>
+<% end %>
