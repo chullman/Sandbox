@@ -1,5 +1,7 @@
 <%= simple_form_for @post, html: { multipart: true } do |f| %>
-  <%= f.input :image %>
+  <%= f.label :image %>
+  <%= f.file_field :image, id: :post_image %>
+
   <%= f.input :caption %>
   <%= f.button :submit %>
 <% end %>

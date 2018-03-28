@@ -50,8 +50,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Added at 2018-03-28 09:24:29 +1000 by ChrisBook:
-gem "paperclip", "~> 6.0"
 
 # Added at 2018-03-28 09:41:40 +1000 by ChrisBook:
 gem "simple_form", "~> 3.5"
@@ -61,3 +59,12 @@ gem "bootstrap-sass", "~> 3.3"
 
 # Added at 2018-03-28 10:26:42 +1000 by ChrisBook:
 gem "jquery-rails", "~> 4.3"
+
+# Added at 2018-03-28 13:19:38 +1000 by ChrisBook:
+gem "devise", "~> 4.4"
+
+# Added at 2018-03-28 14:05:01 +1000 by ChrisBook:
+gem "carrierwave", "~> 1.2"
+
+# Added at 2018-03-28 14:08:18 +1000 by ChrisBook:
+gem "cloudinary", "~> 1.9"
