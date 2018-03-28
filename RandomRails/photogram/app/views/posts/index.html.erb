@@ -1,0 +1,16 @@
+<h1>Photogram</h1>
+
+<% @posts.each do |post| %>
+<div>
+  <%= link_to (image_tag post.image.url, style: 'height:10%;width:10%;'), post_path(post.id) %>
+</div>
+<p>
+  <%= post.caption %>
+</p>
+<% end %>
+
+<ul>
+  <li>
+    <%= link_to "New Post", new_post_path %>
+  </li>
+</ul>

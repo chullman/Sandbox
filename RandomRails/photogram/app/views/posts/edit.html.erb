@@ -1,0 +1,6 @@
+<%= image_tag @post.image.url %>
+
+<%= render 'form' %>
+
+<%= link_to 'Delete Post', post_path(@post.id), method: :delete, data: { confirm: "Are you sure you want to delete this post?" }, :class=>"btn btn-primary" %>
+<%= link_to 'Cancel Edit', posts_path, :class=>"btn btn-primary" %>
