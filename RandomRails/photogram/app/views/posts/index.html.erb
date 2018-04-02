@@ -1,13 +1,28 @@
 <h1>Photogram</h1>
 
 <% @posts.each do |post| %>
-<div>
-  <p> <%= post.user.user_name %> </p>
-  <%= link_to (image_tag post.image_url, style: 'height:10%;width:10%;'), post_path(post.id) %>
-</div>
-<p>
-  <%= post.caption %>
-</p>
+  <div>
+    <p> <%= post.user.user_name %> </p>
+    <%= link_to (image_tag post.image_url, style: 'height:10%;width:10%;'), post_path(post.id) %>
+  </div>
+  <p>
+    <%= post.caption %>
+  </p>
+  <% if post.comments %>
+    <% post.comments.each do |comment|%>
+    <p>
+      <%= comment.user.user_name %>
+      <%= comment.content %>
+      <% if comment.user == current_user %>
+        <%= link_to 'Delete Comment', post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?"} %>
+      <% end %>
+    </p>
+    <% end %>
+  <% end %>
+  <%= form_for [post, post.comments.new] do |f| %>
+   <%= f.text_field :content, placeholder: "Add a comment" %>
+   <%= f.button :submit %>
+  <% end %>
 <% end %>
 
 <ul>
