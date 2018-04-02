@@ -23,7 +23,7 @@ def create
     redirect_to posts_path
   elsif @comment.content.empty?
     flash[:alert] = "Comment can't be empty"
-    redirect_to posts_path
+    render posts_path
   else
     flash[:alert] = "Check the comment form, something went horribly wrong."
     redirect_to posts_path
