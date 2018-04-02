@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @posts = Post.all
@@ -8,7 +9,7 @@ class PostsController < ApplicationController
 
   def new
     # Remember, new doesn't save to db, create does
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def show
@@ -16,11 +17,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    if @post = Post.create(post_params)
+    @post = current_user.posts.create(post_params)
+
+    if @post.save
       flash[:success] = "Your post has been created!"
       redirect_to posts_path
     else
-      flash.now[:alert] = "Your new post couldn't be created!  Please check the form."
+      flash[:alert] = "Your new post couldn't be created!  Please check the form."
       render :new
     end
   end
