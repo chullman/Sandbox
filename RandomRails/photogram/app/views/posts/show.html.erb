@@ -5,3 +5,18 @@
   <%= @post.caption %>
 </p>
 <%= link_to 'Edit post', edit_post_path %>
+  <% if @post.comments %>
+    <% @post.comments.each do |comment|%>
+    <p>
+      <%= comment.user.user_name %>
+      <%= comment.content %>
+      <% if comment.user == current_user %>
+        <%= link_to 'Delete Comment', post_comment_path(@post, comment), method: :delete, data: { confirm: "Are you sure?"} %>
+      <% end %>
+    </p>
+    <% end %>
+  <% end %>
+  <%= form_for [@post, @post.comments.new] do |f| %>
+   <%= f.text_field :content, placeholder: "Add a comment" %>
+   <%= f.button :submit %>
+  <% end %>

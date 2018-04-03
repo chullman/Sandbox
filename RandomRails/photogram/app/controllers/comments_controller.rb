@@ -33,9 +33,14 @@ end
 def destroy
   @comment = @post.comments.find(params[:id])
 
-  @comment.destroy
-  flash[:success] = "Comment deleted :("
-  redirect_to root_path
+  if current_user == @comment.user
+    @comment.destroy
+    flash[:success] = "Comment deleted :("
+    redirect_to root_path
+  else
+    flash[:alert] = "You are not authorised to delete this comment"
+    redirect_to root_path
+  end
 end
 
 private
