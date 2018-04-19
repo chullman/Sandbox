@@ -43,17 +43,21 @@
             "name": "Listen for rdebug-ide",
             "type": "Ruby",
             "request": "attach",
-            "cwd": "${workspaceRoot}",
+            //"cwd": "${workspaceRoot}",
+            "cwd": "C:\\CA\\GIT_Sandbox\\sandbox\\RandomRails\\recipez",
+            "showDebuggerOutput": true,
             "remoteHost": "127.0.0.1",
             "remotePort": "3000",
-            "remoteWorkspaceRoot": "${workspaceRoot}"
+            //"remoteWorkspaceRoot": "${workspaceRoot}"
+            "remoteWorkspaceRoot": "C:\\CA\\GIT_Sandbox\\sandbox\\RandomRails\\recipez"
         },
         {
             "name": "Rails server",
             "type": "Ruby",
             "request": "launch",
             "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/bin/rails",
+            //"program": "${workspaceRoot}/bin/rails",
+            "program": "C:\\Bitnami\\rubystack-2.3.6-4\\ruby\\bin\\rails",
             "args": [
                 "server"
             ]
