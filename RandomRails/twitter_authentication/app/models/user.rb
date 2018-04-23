@@ -22,5 +22,8 @@ class User < ApplicationRecord
     self.has_role?(:admin) || (self.has_role?(:author) && post.user == current_user)
   end
 
+  def can_delete? post
+    self.has_role?(:admin) || self.has_role?(:moderator) || (self.has_role?(:author) && post.user == current_user)
+  end
 
 end
