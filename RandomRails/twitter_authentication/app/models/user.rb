@@ -18,5 +18,9 @@ class User < ApplicationRecord
     self.has_role?(:admin) || self.has_role?(:author)
   end
 
+  def can_update? post
+    self.has_role?(:admin) || (self.has_role?(:author) && post.user == current_user)
+  end
+
 
 end
