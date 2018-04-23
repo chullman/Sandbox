@@ -19,11 +19,11 @@ class User < ApplicationRecord
   end
 
   def can_update? post
-    self.has_role?(:admin) || (self.has_role?(:author) && post.user == current_user)
+    self.has_role?(:admin) || (self.has_role?(:author) && post.user == self)
   end
 
   def can_delete? post
-    self.has_role?(:admin) || self.has_role?(:moderator) || (self.has_role?(:author) && post.user == current_user)
+    self.has_role?(:admin) || self.has_role?(:moderator) || (self.has_role?(:author) && post.user == self)
   end
 
 end
