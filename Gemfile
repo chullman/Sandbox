@@ -16,3 +16,6 @@ gem 'gosu'
 
 # Added at 2018-04-20 14:14:02 +1000 by ChrisBook:
 gem "figaro", "~> 1.1"
+
+# Added at 2018-04-23 10:58:35 +1000 by ChrisBook:
+gem "devise", "~> 4.4"
