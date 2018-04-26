@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Books</h1>
+
+
+  <thead>
+
+  </thead>
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="title">Book Title:</label>
+        <input type="text" name="title"  class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="author_name">Book Author:</label>
+        <input type="text" name="author_name"  class="form-control">
+      </div>
+      <input type="submit" value="Filter" class="btn btn-default">
+    </form>
+  </div>
+</div>
+
+  <tbody>
+
+  <% @books_ordered_by_author = @books.order(:author_id) %>
+
+   <% an_author = 0 %>
+
+  <% @books_ordered_by_author.each do |book|%>
+ 
+    <% if an_author != book.author_id %>
+      <h2> <%= book.author.name %> </h2>
+      <% an_author = book.author_id %>
+    <% end %>
+
+    <table>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= image_tag book.image_url, class: "thumbnail" %></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    </table>
+
+  <% end %>
+
+  </tbody>
+
+
+<br>
+
+<%= link_to 'New Book', new_book_path %>

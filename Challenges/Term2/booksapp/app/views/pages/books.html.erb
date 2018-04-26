@@ -1,0 +1,7 @@
+<h1>Amazon Books List</h1>
+<% @books.each do |book| %>
+  <h3>Title: <%= book.title %></h3>
+  <h4>Author: <%= book.author.name %></h4>
+  <div> <%= image_tag book.image_url %> </div>
+<% end %>
+
