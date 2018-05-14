@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails filterapp_sass: production" uuid="5cd63d05-93b0-4b7b-bf47-7320e75dfa9d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:filterapp_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails filterapp_sass: development" uuid="38d956c1-a3e3-475c-8908-5f879ba8d151">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5433/filterapp_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails filterapp_sass: test" uuid="f8aafcef-be29-4022-9bee-8ad7f70bd4d6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:filterapp_test</jdbc-url>
+    </data-source>
+  </component>
+</project>

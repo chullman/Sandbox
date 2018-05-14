@@ -35,8 +35,10 @@ td {
 
 .mybutton {
   @include button($blue, 2px, 1rem, 2rem, bold);
+  width: $button-width;
 }
 
 .otherbutton {
   @include button($blue, 1px, 2rem, 1rem, normal);
+  width: $button-width / 2;
 }
