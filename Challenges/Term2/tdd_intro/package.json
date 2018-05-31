@@ -1,0 +1,17 @@
+{
+  "name": "tdd_intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nyc mocha calc_tests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "nyc": "^11.8.0"
+  }
+}

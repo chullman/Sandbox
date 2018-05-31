@@ -2,11 +2,9 @@ class Calculate {
 
   add(...args) {
     let sum = 0;
-
     for (let arg of args)  {
       sum += arg;
-    }
-  
+    } 
     return sum;
   }
 
@@ -20,12 +18,5 @@ class Calculate {
 
 }
 
-// function add(a, b) {
-
-// }
-
-// const add = function(a, b) {
-
-// }
 
 module.exports = { Calculate }
