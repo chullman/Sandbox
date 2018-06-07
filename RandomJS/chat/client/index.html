@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+
+    <form action="">
+      <input id="message">
+    </form>
+    <div id="chat">
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <script>
+      const form = document.querySelector('form')
+      const message = document.querySelector('#message')
+      const chat = document.querySelector('#chat')
+
+      // Connect
+      const socket = io('http://localhost:8080')
+
+      // Listen for submit
+      form.onsubmit = (e) => {
+        e.preventDefault()
+        socket.emit('message', message.value)
+        message.value = ''
+      }
+
+      let isTyping = false;
+
+      let timeout;
+
+      message.onkeypress = (e) => {
+
+        if (!isTyping) {
+
+          socket.emit('typing', "User is typing")
+          isTyping = true
+        }
+
+        clearTimeout(timeout)
+        timeout = setTimeout(function () {
+          isTyping = false
+        }, 2000)
+        
+      }
+
+      
+
+      socket.on('new-message', (data) => {
+        chat.innerHTML = chat.innerHTML + `<p>${data}</p>`
+      })
+
+      socket.on('user-connected', (data) => {
+        chat.innerHTML = chat.innerHTML + `<p><strong>${data}</strong></p>`
+      })
+
+      socket.on('user-disconnected', (data) => {
+        chat.innerHTML = chat.innerHTML + `<p><strong>${data}</strong></p>`
+      })
+
+      socket.on('is-typing', (data) => {
+
+        chat.innerHTML = chat.innerHTML + `<p><strong>${data}</strong></p>`
+
+      })
+
+    </script>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <script src="" async defer></script>
+  </body>
+</html>
