@@ -1,4 +1,5 @@
 let base10toAlphaHash = [
+  {0: "0"},
   {1: "1"},
   {2: "2"},
   {3: "3"},
@@ -34,4 +35,4 @@ function baseTenConv(baseTenNum, baseToInt) {
 }
 
 // Example - first argument is the base 10 number you want to convert, second argument is the base you want to convert to (e.g. base 12)
-console.log(baseTenConv(53, 12));
+console.log(baseTenConv(235235, 2));
