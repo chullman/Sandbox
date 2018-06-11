@@ -30,6 +30,27 @@ app.get('/bookmarks/:id', function(req, res) {
 
 })
 
+app.put('/bookmarks/:id', function(req, res){
+
+  let updateValues = { url: req.body.url, title: req.body.title };
+
+  Bookmark.update(
+    updateValues,
+    {returning: true, where: {id: req.params.id} }
+  )
+  .then(function([ rowsUpdate, [updatedBookmark] ]) {
+    res.json(updatedBookmark)
+  })
+})
+
+app.delete('/bookmarks/:id', function(req, res){
+  Bookmark.destroy({ where: { id: [2] }}).then(() => {
+    res.end(`Deleted id 2`)
+  })
+})
+
+
+
 app.post('/bookmarks',function(req,res){
   var url=req.body.url;
   var title=req.body.title;
