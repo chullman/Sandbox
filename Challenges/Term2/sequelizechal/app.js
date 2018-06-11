@@ -33,7 +33,14 @@ app.get('/bookmarks/:id', function(req, res) {
 app.post('/bookmarks',function(req,res){
   var url=req.body.url;
   var title=req.body.title;
-  Bookmark.create({url: req.body.url, title: req.body.title}).then(() => {
+
+  if (!("url" in req.body)) {
+    var url = req.protocol + '://' + req.get('host') + req.originalUrl;;
+  } else {
+    var url = req.body.url;
+  }
+
+  Bookmark.create({url: url, title: title}).then(() => {
     res.end(`Added ${url} and ${title}`);
   })
   
