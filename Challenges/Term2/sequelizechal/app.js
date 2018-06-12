@@ -56,7 +56,7 @@ app.post('/bookmarks',function(req,res){
   var title=req.body.title;
 
   if (!("url" in req.body)) {
-    var url = req.protocol + '://' + req.get('host') + req.originalUrl;;
+    var url = req.protocol + '://' + req.get('host') + req.originalUrl;
   } else {
     var url = req.body.url;
   }

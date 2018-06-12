@@ -8,6 +8,10 @@ con.authenticate().then(() => {
   console.error('Connection failed: ', err)
 })
 
+
+// BELOW PROBABLY SHOULD ALL BE NESTED IN THE CON AUTHENTICATE, BECAUSE THAT IS ASYNC, AND SO MAY NOT FINSH BEFORE THE BELOW CODE IS RUN
+
+
 //defines schema
 
 const Bookmark = con.define('bookmark', {
