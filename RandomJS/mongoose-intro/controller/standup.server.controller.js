@@ -15,3 +15,7 @@ exports.create = function(req, res) {
   // redirect to home page
   res.redirect(301, '/');
 };
+
+exports.getNote = function (req, res) {
+  res.render('newnote', { title: 'standup - new note' })
+}
