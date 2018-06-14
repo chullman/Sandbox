@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Portfolio</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+      // functional component, as opposed to a class component
+      // Note that no render() method is required
+      const NavBar = function() {
+        return (
+          <nav>
+            <a href="facebook.com">facebook</a>
+          </nav>
+        )
+      }
+
+      const IntroText = () => {
+        return (
+          <div>
+            <NavBar />
+            <h1>My Portfolio</h1>
+            <p>Hello</p>
+            <Project title="project 1" />
+            <Project title="project 2" />
+            <Project title="project 3" />
+          </div>
+        )
+      }
+
+      const Project = (props) => {
+        return (
+          <div>
+            <h3>{ props.title }</h3>
+            <p>This is my project</p>
+          </div>
+        )
+      }
+
+      // Must be inside <script> because the following html is jsx
+      ReactDOM.render(
+        <IntroText />
+        ,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>
