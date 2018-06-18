@@ -7,7 +7,7 @@ import Song from './Song'
 class App extends Component {
   state = {
     filter: '',
-    songs: [
+    songs: JSON.parse(localStorage.getItem('songs')) || [
       {
         "artist": "Kanye",
         "title": 'Jesus Walks'
@@ -48,7 +48,7 @@ class App extends Component {
 
     this.setState({ 
       songs: this.state.songs.concat([{"artist": artist, "title": title}])
-    }, this.addSongToLocalStorage(this.state.songs))
+    }, () => {this.addSongToLocalStorage(this.state.songs)})
 
   }
 
@@ -58,11 +58,11 @@ class App extends Component {
   }
 
 
-
   render() {
-    // Filter songs
-    const filterSongs = JSON.parse(localStorage.getItem('songs')).filter(song => song.title.toLowerCase().includes(this.state.filter.toLowerCase()))
 
+    const filterSongs = this.state.songs.filter(song => song.title.toLowerCase().includes(this.state.filter.toLowerCase()))
+    
+  
     return (
       <div className="App App-Custom-Background">
         <h1>Songify</h1>
