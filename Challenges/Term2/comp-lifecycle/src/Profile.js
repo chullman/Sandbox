@@ -4,26 +4,9 @@ export class Profile extends Component {
 
   constructor(props) {
     super(props)
-    this.state = { 
-      person: []
-    }
+    console.log('constructor');
   }
-
-  fetchPerson = () => {
-
-    const url = `https://randomuser.me/api/`
- 
-    fetch(url).then(
-      response => response.json()
-    ).then((person) => {
-      this.setState({ person: person.results[0] })
-    })
-  }
-
-  componentDidMount() {
   
-    this.fetchPerson()
-  }
 
   render() {
     console.log('render')
