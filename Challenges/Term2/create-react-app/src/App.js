@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './NavBar'
 import Project from './Project'
 
-let projectsJson = [
+const projectsJson = [
     {
       "title": "My awesome project",
       "description": "Description 1",
