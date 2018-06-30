@@ -6,4 +6,14 @@ const ReactDOM = require('react-dom');
 
 let GroceryItemList = require('./components/GroceryItemList.jsx');
 
-ReactDOM.render(<GroceryItemList />, document.getElementById('app'))
+const groceryItemStore = require('./stores/GroceryItemStore.jsx')
+let initial = groceryItemStore.getItems();
+
+function render() {
+  ReactDOM.render(<GroceryItemList items={initial} />, document.getElementById('app'))
+}
+groceryItemStore.onChange(function(items){
+  initial = items;
+  render();
+})
+render();

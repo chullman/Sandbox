@@ -28,7 +28,7 @@ gulp.task('live-server', function() {
 
 // Browserify is going to grab main.jsx, if it requires any files inside, it will grab that too
 // Next it takes all that information, and turns it into JS using Reactify transform
-gulp.task('bundle', function() {
+gulp.task('bundle',['copy'],function() {
   return browserify({
     entries:'app/main.jsx',
     debug: true,
@@ -37,6 +37,11 @@ gulp.task('bundle', function() {
   .bundle() // wraps up the transformations and tells browserify that we're ready to output our file
   .pipe(source('app.js')) // main.js is BEFORE transformations and app.js is AFTER transformations
   .pipe(gulp.dest('.tmp'));
+})
+
+gulp.task('copy', function() {
+  gulp.src(['app/*.css'])
+  .pipe(gulp.dest('./.tmp'));
 })
 
 // make serve dependent on live-server
